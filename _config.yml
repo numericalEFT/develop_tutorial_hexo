@@ -106,6 +106,7 @@ theme: minima
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: https://github.com/numericalEFT/developer_tutorial.git
-  branch: master
+  type: ""
+  # type: git
+  # repo: https://github.com/numericalEFT/developer_tutorial.git
+  # branch: master
