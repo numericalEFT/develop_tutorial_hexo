@@ -23,7 +23,7 @@ pretty_urls:
 
 # Directory
 source_dir: source
-public_dir: public #this is the key to change the root!
+public_dir: docs #this is the key to change the root!
 # public_dir: docs #this is the key to change the root!
 tag_dir: tags
 archive_dir: archives
@@ -107,7 +107,7 @@ theme: minima
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ""
-  # type: git
-  # repo: https://github.com/numericalEFT/developer_tutorial.git
-  # branch: master
+  # type: ""
+  type: git
+  repo: https://github.com/numericalEFT/developer_tutorial_hexo.git
+  branch: master
