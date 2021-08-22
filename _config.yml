@@ -14,7 +14,7 @@ timezone: ""
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://numericaleft.github.io/
-root: /developer_tutorial_hexo/
+root: /developer_tutorial/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -109,5 +109,5 @@ theme: minima
 deploy:
   # type: ""
   type: git
-  repo: https://github.com/numericalEFT/developer_tutorial_hexo.git
+  repo: https://github.com/numericalEFT/developer_tutorial.git
   branch: master

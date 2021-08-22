@@ -39,9 +39,9 @@ switch_dark: 🌑
 
 # index_cover: /developer_tutorial/img/home-
 # favicon
-favicon: /developer_tutorial_hexo/images/favicon.png
+favicon: /developer_tutorial/images/favicon.png
 # thumbnail
-thumbnail: /developer_tutorial_hexo/images/thumbnail.jpg
+thumbnail: /developer_tutorial/images/thumbnail.jpg
 
 article:
   thumbnail: true
