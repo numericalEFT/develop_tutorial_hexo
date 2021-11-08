@@ -39,10 +39,11 @@ git push -u origin master
 4. Update the links for badges. Make sure that the links are pointed to the correct account hosting the repository.
 
 5. Turn on support for documentation pages.
-- Check docs/make.jl. Make sure that the links are pointed to the correct account hosting the repository. The link in the following codes are particularly important for github to create the new branch "gh-pages" to host the documentations.
+- Check docs/make.jl.  Make sure that the links are pointed to the correct account hosting the repository. The link in the following codes are particularly important for github to create the new branch "gh-pages" to host the documentations. The key "devbranch" in the following codes must be "master" instead of "main",
 ```julia
 deploydocs(;
 repo="github.com/numericalEFT/MCIntegration.jl",
+devbranch="master",
 )
 ```
 - After pushing to github, make sure github generates the new branch "gh-pages". You may check the highlight parts in the following screenshot to check if the deployment to gh-pages branch is successful or not.

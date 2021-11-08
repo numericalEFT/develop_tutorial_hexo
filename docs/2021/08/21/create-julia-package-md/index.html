@@ -221,9 +221,10 @@ git push -u origin master<span aria-hidden="true" class="line-numbers-rows"><spa
 </li>
 </ol>
 <ul>
-<li>Check docs/make.jl. Make sure that the links are pointed to the correct account hosting the repository. The link in the following codes are particularly important for github to create the new branch “gh-pages” to host the documentations.<pre class="line-numbers language-julia" data-language="julia"><code class="language-julia">deploydocs<span class="token punctuation">(</span><span class="token punctuation">;</span>
+<li>Check docs/make.jl.  Make sure that the links are pointed to the correct account hosting the repository. The link in the following codes are particularly important for github to create the new branch “gh-pages” to host the documentations. The key “devbranch” in the following codes must be “master” instead of “main”,<pre class="line-numbers language-julia" data-language="julia"><code class="language-julia">deploydocs<span class="token punctuation">(</span><span class="token punctuation">;</span>
 repo<span class="token operator">=</span><span class="token string">"github.com/numericalEFT/MCIntegration.jl"</span><span class="token punctuation">,</span>
-<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+devbranch<span class="token operator">=</span><span class="token string">"master"</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li>After pushing to github, make sure github generates the new branch “gh-pages”. You may check the highlight parts in the following screenshot to check if the deployment to gh-pages branch is successful or not.<br><img src="/developer_tutorial/2021/08/21/create-julia-package-md/github-doc-deploy.png" alt="deploy"></li>
 <li>Go to “settings/pages”, make the following settings for the documentation webpage<br><img src="/developer_tutorial/2021/08/21/create-julia-package-md/github-doc.png" alt="doc"></li>
 <li>It takes a couple of minutes for github to get the webpage ready.</li>
