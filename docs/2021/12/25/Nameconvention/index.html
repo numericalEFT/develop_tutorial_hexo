@@ -11,34 +11,34 @@
   <meta charset="utf-8">
 
   
-  <title>All Posts - Kun Chen</title>
+  <title>Name_convention.md</title>
   
-  <link rel="canonical" href="https://numericaleft.github.io/archives/">
+  <link rel="canonical" href="https://numericaleft.github.io/2021/12/25/Nameconvention/">
   
-  <meta name="description" content="">
+  <meta name="description" content="Julia name conventions(1) Modules and type names use capitalization and camel case: module SparseArrays , struct UnitRange.(2) Functions are lowercase">
   
   
   <meta name="author" content="Kun Chen">
   
-  <meta property="og:image" content="https://numericaleft.github.io/developer_tutorial/images/thumbnail.jpg">
+  <meta property="og:image" content="https://numericaleft.github.ioundefined">
   
   <meta property="og:site_name" content="Hexo" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="All Posts - Kun Chen" />
+  <meta property="og:title" content="Name_convention.md" />
   
-  <meta property="og:description" content="">
+  <meta property="og:description" content="Julia name conventions(1) Modules and type names use capitalization and camel case: module SparseArrays , struct UnitRange.(2) Functions are lowercase">
   
-  <meta property="og:url" content="https://numericaleft.github.io/archives/" />
+  <meta property="og:url" content="https://numericaleft.github.io/2021/12/25/Nameconvention/" />
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="All Posts - Kun Chen">
+  <meta name="twitter:title" content="Name_convention.md">
   
-  <meta name="twitter:description" content="">
+  <meta name="twitter:description" content="Julia name conventions(1) Modules and type names use capitalization and camel case: module SparseArrays , struct UnitRange.(2) Functions are lowercase">
   
   
-  <meta name="twitter:image" content="https://numericaleft.github.io/developer_tutorial/images/thumbnail.jpg">
+  <meta name="twitter:image" content="https://numericaleft.github.ioundefined">
   
-  <meta name="twitter:url" content="https://numericaleft.github.io/archives/" />
+  <meta name="twitter:url" content="https://numericaleft.github.io/2021/12/25/Nameconvention/" />
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -189,64 +189,12 @@
 </div>
 
         <div class="trans">
-          
-<h2>All Posts</h2>
+            <h2>Name_convention.md</h2>
 
+  <h1 id="Julia-name-conventions"><a href="#Julia-name-conventions" class="headerlink" title="Julia name conventions"></a>Julia name conventions</h1><p>(1) <em>Modules</em> and type names use <strong>capitalization</strong> and <strong>camel</strong> case: <code>module SparseArrays</code> , <code>struct UnitRange</code>.<br>(2) <em>Functions</em> are <strong>lowercase</strong> ( <code>maximum</code>, <code>convert</code> ) and, when readable, with multiple words squashed together (<code>isequal</code>, <code>haskey</code>). When necessary, use <strong>underscores</strong> as word separators. Underscores are also used to indicate a combination of concepts (<code>remotecall_fetch</code> as a more efficient implementation of <code>remotecall(...)</code> ) or as modifiers.fetch.<br>If a function name requires multiple words, consider whether it might represent more than one concept and might be better split into pieces.<br>(3) functions mutating at least one of their arguments end in <code>!</code>.<br>(4) conciseness is valued, but <strong>avoid abbreviation</strong> ( <code>indexin</code> rather than <code>indxin</code> ) as it becomes difficult to remember whether and how particular words are abbreviated.</p>
 
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">Dec 25, 2021</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/developer_tutorial/2021/12/25/Nameconvention/" class="">
-            
-              Name_convention.md
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">Dec 24, 2021</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/developer_tutorial/2021/12/24/quick%20-start-with-hexo-blog/" class="">
-            
-              Hello World
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article>
-      <div class="row">
-
-        <div class="three columns left lit">
-          <p class="bottom">Aug 21, 2021</p>
-        </div>
-        <div class="nine columns left mb-3">
-          <a href="/developer_tutorial/2021/08/21/create-julia-package-md/" class="">
-            
-              Create new julia package with PkgTemplate.jl
-            
-          </a>
-        </div>
-      </div>
-    </article>
-
-<div class="pagination-bar">
-  <ul class="pagination">
-    
-    
-  </ul>
-</div>
+  <p> — Dec 25, 2021</p>
+  
 
 
           <div class="row mt-2">

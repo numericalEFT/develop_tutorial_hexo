@@ -1,3 +1,8 @@
+---
+title: Name_convention.md
+date: 2021-12-25 17:23:47
+tags:
+---
 # Julia name conventions 
 (1) *Modules* and type names use **capitalization** and **camel** case: `module SparseArrays` , `struct UnitRange`.    
 (2) *Functions* are **lowercase** ( `maximum`, `convert` ) and, when readable, with multiple words squashed together (`isequal`, `haskey`). When necessary, use **underscores** as word separators. Underscores are also used to indicate a combination of concepts (`remotecall_fetch` as a more efficient implementation of `remotecall(...)` ) or as modifiers.fetch.  
