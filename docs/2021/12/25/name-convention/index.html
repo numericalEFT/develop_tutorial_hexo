@@ -11,11 +11,11 @@
   <meta charset="utf-8">
 
   
-  <title>Name_convention.md</title>
+  <title>Julia Name Convention</title>
   
-  <link rel="canonical" href="https://numericaleft.github.io/2021/12/25/Nameconvention/">
+  <link rel="canonical" href="https://numericaleft.github.io/2021/12/25/name-convention/">
   
-  <meta name="description" content="Julia name conventions(1) Modules and type names use capitalization and camel case: module SparseArrays , struct UnitRange.(2) Functions are lowercase">
+  <meta name="description" content="Name Conventions Modules and type names use capitalization and camel case: module SparseArrays , struct UnitRange.      Functions are lowercase ( maxi">
   
   
   <meta name="author" content="Kun Chen">
@@ -24,21 +24,21 @@
   
   <meta property="og:site_name" content="Hexo" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Name_convention.md" />
+  <meta property="og:title" content="Julia Name Convention" />
   
-  <meta property="og:description" content="Julia name conventions(1) Modules and type names use capitalization and camel case: module SparseArrays , struct UnitRange.(2) Functions are lowercase">
+  <meta property="og:description" content="Name Conventions Modules and type names use capitalization and camel case: module SparseArrays , struct UnitRange.      Functions are lowercase ( maxi">
   
-  <meta property="og:url" content="https://numericaleft.github.io/2021/12/25/Nameconvention/" />
+  <meta property="og:url" content="https://numericaleft.github.io/2021/12/25/name-convention/" />
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Name_convention.md">
+  <meta name="twitter:title" content="Julia Name Convention">
   
-  <meta name="twitter:description" content="Julia name conventions(1) Modules and type names use capitalization and camel case: module SparseArrays , struct UnitRange.(2) Functions are lowercase">
+  <meta name="twitter:description" content="Name Conventions Modules and type names use capitalization and camel case: module SparseArrays , struct UnitRange.      Functions are lowercase ( maxi">
   
   
   <meta name="twitter:image" content="https://numericaleft.github.ioundefined">
   
-  <meta name="twitter:url" content="https://numericaleft.github.io/2021/12/25/Nameconvention/" />
+  <meta name="twitter:url" content="https://numericaleft.github.io/2021/12/25/name-convention/" />
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -189,11 +189,51 @@
 </div>
 
         <div class="trans">
-            <h2>Name_convention.md</h2>
+            <h2>Julia Name Convention</h2>
 
-  <h1 id="Julia-name-conventions"><a href="#Julia-name-conventions" class="headerlink" title="Julia name conventions"></a>Julia name conventions</h1><p>(1) <em>Modules</em> and type names use <strong>capitalization</strong> and <strong>camel</strong> case: <code>module SparseArrays</code> , <code>struct UnitRange</code>.<br>(2) <em>Functions</em> are <strong>lowercase</strong> ( <code>maximum</code>, <code>convert</code> ) and, when readable, with multiple words squashed together (<code>isequal</code>, <code>haskey</code>). When necessary, use <strong>underscores</strong> as word separators. Underscores are also used to indicate a combination of concepts (<code>remotecall_fetch</code> as a more efficient implementation of <code>remotecall(...)</code> ) or as modifiers.fetch.<br>If a function name requires multiple words, consider whether it might represent more than one concept and might be better split into pieces.<br>(3) functions mutating at least one of their arguments end in <code>!</code>.<br>(4) conciseness is valued, but <strong>avoid abbreviation</strong> ( <code>indexin</code> rather than <code>indxin</code> ) as it becomes difficult to remember whether and how particular words are abbreviated.</p>
+  <h1 id="Name-Conventions"><a href="#Name-Conventions" class="headerlink" title="Name Conventions"></a>Name Conventions</h1><ol>
+<li><p><em>Modules</em> and <em>type</em> names use <strong>capitalization</strong> and <strong>camel</strong> case: <code>module SparseArrays</code> , <code>struct UnitRange</code>.    </p>
+</li>
+<li><p><em>Functions</em> are <strong>lowercase</strong> ( <code>maximum</code>, <code>convert</code> ) and, when readable, with multiple words squashed together (<code>isequal</code>, <code>haskey</code>).</p>
+<ul>
+<li>When necessary, use <strong>underscores</strong> as word separators. </li>
+<li>Underscores are also used to indicate a combination of concepts (<code>remotecall_fetch</code> as a more efficient implementation of<br><code>fetch(remotecall(...)))</code> or as modifiers.</li>
+<li>If a function name requires multiple words, consider whether it might represent more than one concept and might be better split into pieces.  </li>
+</ul>
+</li>
+<li><p>Functions that mutate at least one of their arguments end in <code>!</code>.   </p>
+</li>
+<li><p>Conciseness is valued, but <strong>avoid abbreviation</strong> ( <code>indexin</code> rather than <code>indxin</code> ) as it becomes difficult to remember whether and how particular words are abbreviated.</p>
+</li>
+</ol>
+<h1 id="Write-functions-with-argument-ordering-similar-to-Julia-Base"><a href="#Write-functions-with-argument-ordering-similar-to-Julia-Base" class="headerlink" title="Write functions with argument ordering similar to Julia Base"></a>Write functions with argument ordering similar to Julia Base</h1><p>As a general rule, the Base library uses the following order of arguments to functions, as applicable:</p>
+<ol>
+<li><p>Function argument. Putting a function argument first permits the use of <code>do</code> blocks for passing multiline anonymous functions.</p>
+</li>
+<li><p>I/O stream. Specifying the IO object first permits passing the function to functions such as <code>sprint</code>, e.g. <code>sprint(show, x)</code>.</p>
+</li>
+<li><p>Input being mutated. For example, in <code>fill!(x, v)</code>, <code>x</code> is the object being mutated and it appears before the value to be inserted into <code>x</code>.</p>
+</li>
+<li><p>Type. Passing a type typically means that the output will have the given type. In <code>parse(Int, &quot;1&quot;)</code>, the type comes before the string to parse. There are many such examples where the type appears first, but it’s useful to note that in <code>read(io, String)</code>, the IO argument appears before the type, which is in keeping with the order outlined here.</p>
+</li>
+<li><p>Input not being mutated. In fill!(x, v), v is not being mutated and it comes after x.</p>
+</li>
+<li><p>Key. For associative collections, this is the key of the key-value pair(s). For other indexed collections, this is the index.</p>
+</li>
+<li><p>Value. For associative collections, this is the value of the key-value pair(s). In cases like <code>fill!(x, v)</code>, this is <code>v</code>.</p>
+</li>
+<li><p>Everything else. Any other arguments.</p>
+</li>
+<li><p>Varargs. This refers to arguments that can be listed indefinitely at the end of a function call. For example, in <code>Matrix&#123;T&#125;(undef, dims)</code>, the dimensions can be given as a Tuple, e.g. <code>Matrix&#123;T&#125;(undef, (1,2))</code>, or as Varargs, e.g. <code>Matrix&#123;T&#125;(undef, 1, 2)</code>.</p>
+</li>
+<li><p>Keyword arguments. In Julia keyword arguments have to come last anyway in function definitions; they’re listed here for the sake of completeness.</p>
+</li>
+</ol>
+<p>The vast majority of functions will not take every kind of argument listed above; the numbers merely denote the precedence that should be used for any applicable arguments to a function.</p>
+<p>There are of course a few exceptions. For example, in <code>convert</code>, the type should always come first. In <code>setindex!</code>, the value comes before the indices so that the indices can be provided as varargs.</p>
+<p>When designing APIs, adhering to this general order as much as possible is likely to give users of your functions a more consistent experience.</p>
 
-  <p> — Dec 25, 2021</p>
+  <p><a class="classtest-link" href="/developer_tutorial/tags/julia/" rel="tag">julia</a> — Dec 25, 2021</p>
   
 
 
