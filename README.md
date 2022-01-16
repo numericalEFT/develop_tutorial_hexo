@@ -32,5 +32,6 @@ openssl: 1.0.1p
 2. In the root folder of the local repo, run "npm install".
 3. Run "hexo new post-name.md" to generate a new post in "source" folder. Note that the command will create a new markdown file as well as a folder for attachments.
 4. Run "hexo g" to generate the website.
-5. Run "hexo d" to deploy the new website to [webpage repo](https://github.com/numericalEFT/developer_tutorial)
+5. Run "hexo server" to preview the website on your local computer.
+6. Run "hexo d" to deploy the new website to [webpage repo](https://github.com/numericalEFT/developer_tutorial)
 
