@@ -46,6 +46,8 @@ repo="github.com/numericalEFT/MCIntegration.jl",
 devbranch="master",
 )
 ```
+Note that uppercase in ``numericalEFT`` in the above script can not be the lowercase counterpart ``numericaleft``. Otherwise, github will fail to depoly the doumentation.
+
 - After pushing to github, make sure github generates the new branch "gh-pages". You may check the highlight parts in the following screenshot to check if the deployment to gh-pages branch is successful or not.
 ![deploy](github-doc-deploy.png)
 - Go to "settings/pages", make the following settings for the documentation webpage
