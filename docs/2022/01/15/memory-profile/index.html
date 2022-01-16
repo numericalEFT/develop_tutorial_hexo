@@ -11,34 +11,34 @@
   <meta charset="utf-8">
 
   
-  <title>Hexo</title>
+  <title>Memory Profile</title>
   
-  <link rel="canonical" href="https://numericaleft.github.io/">
+  <link rel="canonical" href="https://numericaleft.github.io/2022/01/15/memory-profile/">
   
-  <meta name="description" content="">
+  <meta name="description" content="Memory allocation is expansive. It is important to find the unecessary memory allocation in the code. You may profile the memory usage of your code wi">
   
   
   <meta name="author" content="Kun Chen">
   
-  <meta property="og:image" content="https://numericaleft.github.io/developer_tutorial/images/thumbnail.jpg">
+  <meta property="og:image" content="https://numericaleft.github.ioundefined">
   
   <meta property="og:site_name" content="Hexo" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Hexo" />
+  <meta property="og:title" content="Memory Profile" />
   
-  <meta property="og:description" content="">
+  <meta property="og:description" content="Memory allocation is expansive. It is important to find the unecessary memory allocation in the code. You may profile the memory usage of your code wi">
   
-  <meta property="og:url" content="https://numericaleft.github.io/" />
+  <meta property="og:url" content="https://numericaleft.github.io/2022/01/15/memory-profile/" />
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Hexo">
+  <meta name="twitter:title" content="Memory Profile">
   
-  <meta name="twitter:description" content="">
+  <meta name="twitter:description" content="Memory allocation is expansive. It is important to find the unecessary memory allocation in the code. You may profile the memory usage of your code wi">
   
   
-  <meta name="twitter:image" content="https://numericaleft.github.io/developer_tutorial/images/thumbnail.jpg">
+  <meta name="twitter:image" content="https://numericaleft.github.ioundefined">
   
-  <meta name="twitter:url" content="https://numericaleft.github.io/" />
+  <meta name="twitter:url" content="https://numericaleft.github.io/2022/01/15/memory-profile/" />
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -189,104 +189,18 @@
 </div>
 
         <div class="trans">
-          <div class="row">
-  <div class="column">
-    <!-- Main information, edit it on theme/_config.yml -->
-    <h2 class="mb-2"></h2>
-    <p>Blog on the useful techniques to develop the library</p>
-    <p></p>
-  </div>
-</div>
+            <h2>Memory Profile</h2>
 
-<h3>Recent Posts</h3>
+  <p>Memory allocation is expansive. It is important to find the unecessary memory allocation in the code. You may profile the memory usage of your code with the following steps. </p>
+<ul>
+<li>Run command:<pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">julia --track-allocation&#x3D;user script.jl<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>files *.mem will be generated for each script</li>
+<li>To clean up *.mem file, run command:<pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">find . -name &quot;*.mem&quot; -type f -delete<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
 
+  <p> — Jan 15, 2022</p>
+  
 
-<div class="row">
-
-  <div class="three columns left lit">
-    <p class="bottom">Jan 15, 2022</p>
-  </div>
-  <div class="nine columns left mb-3">
-    <a href="/developer_tutorial/2022/01/15/memory-profile/" >
-      
-        Memory Profile
-      
-    </a>
-  </div>
-</div>
-
-<div class="row">
-
-  <div class="three columns left lit">
-    <p class="bottom">Dec 28, 2021</p>
-  </div>
-  <div class="nine columns left mb-3">
-    <a href="/developer_tutorial/2021/12/28/logo-md/" >
-      
-        Logo
-      
-    </a>
-  </div>
-</div>
-
-<div class="row">
-
-  <div class="three columns left lit">
-    <p class="bottom">Dec 25, 2021</p>
-  </div>
-  <div class="nine columns left mb-3">
-    <a href="/developer_tutorial/2021/12/25/name-convention/" >
-      
-        Julia Name Convention
-      
-    </a>
-  </div>
-</div>
-
-<div class="row">
-
-  <div class="three columns left lit">
-    <p class="bottom">Dec 20, 2021</p>
-  </div>
-  <div class="nine columns left mb-3">
-    <a href="/developer_tutorial/2021/12/20/benchmark-getproperty-md/" >
-      
-        A benchmark on Julia getproperty() function for user defined struct
-      
-    </a>
-  </div>
-</div>
-
-<div class="row">
-
-  <div class="three columns left lit">
-    <p class="bottom">Nov 7, 2021</p>
-  </div>
-  <div class="nine columns left mb-3">
-    <a href="/developer_tutorial/2021/11/07/quick%20-start-with-hexo-blog/" >
-      
-        Hexo Quick Start
-      
-    </a>
-  </div>
-</div>
-
-<div class="row">
-
-  <div class="three columns left lit">
-    <p class="bottom">Aug 21, 2021</p>
-  </div>
-  <div class="nine columns left mb-3">
-    <a href="/developer_tutorial/2021/08/21/create-julia-package-md/" >
-      
-        Create new julia package with PkgTemplate.jl
-      
-    </a>
-  </div>
-</div>
-
-
-<h4> <a href="/developer_tutorial/archives">All Posts</a></h4>
 
           <div class="row mt-2">
   
