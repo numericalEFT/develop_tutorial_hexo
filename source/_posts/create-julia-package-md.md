@@ -58,3 +58,5 @@ Note that uppercase in ``numericalEFT`` in the above script can not be the lower
 ```
 @JuliaRegistrator register
 ```
+
+7. You can add a .gitignore file to the repo, the content could be found in https://github.com/github/gitignore/blob/main/Julia.gitignore.
